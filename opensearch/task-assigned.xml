@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" xmlns:moz="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>Task search</ShortName>
+  <Description>ITSM Task search by TAS or CRQ</Description>
+  <Url type="text/html" method="get" template="http://SERVER2/ppn/itsm_gate/?e=N&amp;t=TAS&amp;s=a&amp;query={searchTerms}"/>
+  <Image width="16" height="16"></Image>
+  <InputEncoding>UTF-8</InputEncoding>
+</OpenSearchDescription>

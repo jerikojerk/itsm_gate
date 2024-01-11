@@ -1,0 +1,40 @@
+//
+h1 {color:#6495ED;font-size:12pt;}
+.horizontalstak {
+display:none;
+}
+img {border:none;}
+
+#PromiseGate tr.filterRow {
+display:none;
+}
+#PromiseGate thead ,#PromiseGate tfoot {
+background-color: #D0E3FA ;
+}
+#PromiseGate tbody td {
+padding:1pt;
+}
+
+.sUnassigned{background-color:Silver  ;}
+.sAssigneeMyself{background-color:#95F28A;}
+.sDraft{background-color:#E9DF7B;}
+.sPlanningInProgress{background-color:#B8CCE4;}
+.sScheduled{background-color:#CCC0DA;}
+.sScheduledApproval{background-color:#B1A0C7;}
+.sPending{background-color:#EA2D28;}
+.sCompleted{background-color:#C4D79B;}
+.rAMER{background-color:#FABF8F}
+.rEMEA{background-color:LightSkyBlue ;}
+.rAPAC{background-color:PaleGreen}
+
+#PromiseGate {
+border-collapse:collapse;
+}
+
+#PromiseGate  th, #PromiseGate  td, #PromiseGate  tr {
+border-bottom:1px #6495ED solid;
+}
+
+#navig, #search,#popup {
+display:none;
+}
