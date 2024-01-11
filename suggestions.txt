@@ -1,0 +1,115 @@
+---------------------------
+--- index table des changes en prod transactionnelle
+SELECT C1000000001,
+       C1000000079,
+       C1000000182,
+       C1000000337 || '#' || C230000009 || '#' || C7,
+       C1000000348,
+       C1000000349,
+       C1000000350,
+       C1000000408,
+       C1000000829,
+       C1000003234,
+       C179,
+       C7,
+       C1,
+       C1000000337,
+       C1000003231
+  FROM itsmprd.T1789
+ WHERE ROWNUM < 300;
+
+--- index table des changes en prod reporting
+select 
+C1000000001, ---change location
+C1000000079,--manager group code
+C1000000182,--- unique visible change
+C1000000337||'#'||C230000009||'#'||C7, -- requested for # almost constant # status
+C1000000348, --- a date
+C1000000349, ---another date
+C1000000350, --- yan date
+C1000000408, --- Manager login
+C1000000829, --- ?
+C1000003234, ---coordinator support group
+C179, ---uniq guid
+C7, --- status of change
+C1, --- internal primary key
+C1000000337||'#'||C7,  --- requestor & status
+C1000003231||'#'||C7   --- coordinato & status
+FROM itsmprd.T1789
+where rownum <300 and C1000000182='CRQ000000110082';
+
+
+select 
+C1,
+C1000000001,
+C1000000079,
+C1000000182,
+C1000000337||'#'||C230000009||'#'||C7,
+C1000000348,
+C1000000349,
+C1000000350,
+C1000000408,
+C1000000829,
+C1000003234,
+C179,
+C7,
+C1000000337||'#'||C7,
+C1000003231||'#'||C7
+from itsmprd.t1191 
+where rownum<300
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE INDEX ITSMPRD.I1789_1000000079_2 ON ITSMPRD.T1789
+(C1000000079,C7)
+LOGGING
+TABLESPACE ITSMPRDI
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          128K
+            NEXT             1M
+            MAXSIZE          UNLIMITED
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+            FLASH_CACHE      DEFAULT
+            CELL_FLASH_CACHE DEFAULT
+           )
+NOPARALLEL;
+DROP INDEX ITSMPRD.I1789_1000000079_1;
+
+
+CREATE INDEX ITSMPRD.I1789_1000003234_2 ON ITSMPRD.T1789
+(C1000003234,C7)
+LOGGING
+TABLESPACE ITSMPRDI
+PCTFREE    10
+INITRANS   2
+MAXTRANS   255
+STORAGE    (
+            INITIAL          128K
+            NEXT             1M
+            MAXSIZE          UNLIMITED
+            MINEXTENTS       1
+            MAXEXTENTS       UNLIMITED
+            PCTINCREASE      0
+            BUFFER_POOL      DEFAULT
+            FLASH_CACHE      DEFAULT
+            CELL_FLASH_CACHE DEFAULT
+           )
+NOPARALLEL;
+DROP INDEX ITSMPRD.I1789_1000003234_1;

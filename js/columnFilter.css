@@ -1,0 +1,57 @@
+
+tr.filterRow, tr.filterRow td, tr.filterRow th{
+height:inherit;
+}
+
+.filterContainer  {
+color:black;
+background-color: #DDDDDD /*Gray-smoke */ ;opacity:0.8;
+margin:0;padding:2px;
+position:absolute;
+display:block;
+border:black solid 1px;
+z-index:0;
+}
+
+.filterContainer:hover{
+opacity:1; z-index:1;
+}
+
+.filterContainer li:hover{
+text-shadow: 0em 0em 0.08em gray;}
+
+.filterContainer ul { list-style-type:none;margin:0;padding:0;overflow: scroll;background-color:white;
+max-height: 22em;/*max-width:50em;position:static;*/
+}
+
+.filterContainer p{
+margin:0;padding:1px 3pt;text-align:center;
+}
+
+.filterContainer input {
+width:15ex; border: 1px solid black;
+}
+
+.filterContainer li:first-child {
+font-style:italic;
+}
+.filterContainer li {
+margin:0; padding:1pt; height:1.4em;white-space: nowrap;/*position:static;*/
+cursor:pointer;
+}
+.filterContainer li.selectedFilter {
+background:#D0E3FA;font-weight:bolder;
+}
+
+.filterWrite  input {border:1px dotted black;margin:auto 0;width:18ex;}
+.filterWrite button, .filterSelect button {width:14ex;}
+
+/*
+.filterContainer ul.selectedOnly li{
+display:none;
+}
+
+.filterContainer ul.selectedOnly li.selectedOnly{
+display:static;
+}
+*/
